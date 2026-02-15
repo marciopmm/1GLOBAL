@@ -34,7 +34,7 @@ namespace Global.Application.Services.DeviceDTOs
             var devices = await _deviceService.GetDevicesByStateAsync(parsedState);
             return _mapper.Map<IEnumerable<DeviceDTO>>(devices);
         }
-        
+
         public async Task<IEnumerable<DeviceDTO>> GetDevicesByBrandAsync(string brand)
         {
             var devices = await _deviceService.GetDevicesByBrandAsync(brand);
@@ -47,7 +47,7 @@ namespace Global.Application.Services.DeviceDTOs
             return _mapper.Map<DeviceDTO>(device);
         }
 
-        public async Task AddDeviceAsync(DeviceDTO deviceDto)
+        public async Task<DeviceDTO> AddDeviceAsync(DeviceDTO deviceDto)
         {
             var device = _mapper.Map<Device>(deviceDto);
             await _deviceService.AddDeviceAsync(device);

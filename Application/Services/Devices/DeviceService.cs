@@ -31,9 +31,9 @@ namespace Global.Application.Services.Devices
         {
             throw new NotImplementedException();
         }
-        public async Task AddDeviceAsync(Device device)
+        public async Task<Device> AddDeviceAsync(Device device)
         {
-            throw new NotImplementedException();
+            return await _deviceRepository.AddAsync(device);
         }
         public async Task UpdateDeviceAsync(Device device)
         {

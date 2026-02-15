@@ -1,6 +1,7 @@
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Global.Domain.Entities;
@@ -9,18 +10,29 @@ namespace Global.Infrastructure.Persistence.Db
 {
     public class GlobalDbContext : DbContext
     {
-        private readonly string _dbPath;
+        private readonly string _connectionString;
 
         public virtual DbSet<Device> DeviceDbSet { get; set; } = null!;
 
         public GlobalDbContext(IConfiguration configuration)
         {
-            _dbPath = configuration.GetConnectionString("Default") ?? "global.db";
+            var rawConnection = configuration.GetConnectionString("Default") ?? "Data Source=SQLite/GlobalDb.sqlite";
+            var sqliteBuilder = new SqliteConnectionStringBuilder(rawConnection);
+
+            var absolutePath = Path.GetFullPath(sqliteBuilder.DataSource);
+            var directory = Path.GetDirectoryName(absolutePath);
+            if (!string.IsNullOrWhiteSpace(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            sqliteBuilder.DataSource = absolutePath;
+            _connectionString = sqliteBuilder.ToString();
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite($"Data Source={_dbPath}");
+            optionsBuilder.UseSqlite(_connectionString);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

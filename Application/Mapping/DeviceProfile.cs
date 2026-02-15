@@ -9,8 +9,8 @@ public class DeviceProfile : Profile
     public DeviceProfile()
     {
         CreateMap<CreateDeviceRequest, Device>()
-            .ForCtorParam("id", opt => opt.MapFrom(_ => Guid.NewGuid()))
-            .ForCtorParam("creationTime", opt => opt.MapFrom(_ => DateTime.UtcNow));
+            .ConstructUsing(src =>
+                new Device(src.Name, src.Brand, src.State, DateTime.UtcNow));
         CreateMap<Device, DeviceDTO>()
             .ForMember(dest => dest.State, opt => opt.MapFrom(src => src.State.ToString()));
         CreateMap<DeviceDTO, Device>()
