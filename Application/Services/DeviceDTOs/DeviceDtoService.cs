@@ -1,11 +1,11 @@
 using AutoMapper;
-using Global.Application.Abstractions.Services;
-using Global.Application.DTOs;
-using Global.Domain.Entities;
-using Global.Domain.Enums;
-using Global.Domain.Ports;
+using OneGlobal.Application.Abstractions.Services;
+using OneGlobal.Application.DTOs;
+using OneGlobal.Domain.Entities;
+using OneGlobal.Domain.Enums;
+using OneGlobal.Domain.Ports;
 
-namespace Global.Application.Services.DeviceDTOs
+namespace OneGlobal.Application.Services.DeviceDTOs
 {
     public class DeviceDtoService : IDeviceDtoService
     {
@@ -40,7 +40,7 @@ namespace Global.Application.Services.DeviceDTOs
             var devices = await _deviceService.GetDevicesByBrandAsync(brand);
             return _mapper.Map<IEnumerable<DeviceDTO>>(devices);
         }
-        
+
         public async Task<DeviceDTO> GetDeviceByIdAsync(Guid id)
         {
             var device = await _deviceService.GetDeviceByIdAsync(id);

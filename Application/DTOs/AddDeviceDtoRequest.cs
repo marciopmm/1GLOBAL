@@ -1,6 +1,6 @@
-using Global.Domain.Enums;
+using OneGlobal.Domain.Enums;
 
-namespace Global.Application.DTOs
+namespace OneGlobal.Application.DTOs
 {
     public class AddDeviceDtoRequest
     {

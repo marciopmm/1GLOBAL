@@ -2281,9 +2281,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Tests\\Global.Tests.csproj",
-      "projectName": "Global.Tests",
-      "projectPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Tests\\Global.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Tests\\OneGlobal.Tests.csproj",
+      "projectName": "OneGlobal.Tests",
+      "projectPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Tests\\OneGlobal.Tests.csproj",
       "packagesPath": "C:\\Users\\Marcio\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Tests\\obj\\",
       "projectStyle": "PackageReference",

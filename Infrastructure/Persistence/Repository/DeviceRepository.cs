@@ -1,10 +1,10 @@
-using Global.Domain.Entities;
-using Global.Domain.Exceptions;
-using Global.Domain.Ports;
-using Global.Infrastructure.Persistence.Db;
+using OneGlobal.Domain.Entities;
+using OneGlobal.Domain.Exceptions;
+using OneGlobal.Domain.Ports;
+using OneGlobal.Infrastructure.Persistence.Db;
 using Microsoft.EntityFrameworkCore;
 
-namespace Global.Infrastructure.Persistence.Repository;
+namespace OneGlobal.Infrastructure.Persistence.Repository;
 
 public class DeviceRepository : IDeviceRepository
 {
@@ -24,7 +24,7 @@ public class DeviceRepository : IDeviceRepository
     {
         return await _context.DeviceDbSet.ToListAsync();
     }
-    
+
     public async Task<Device> AddAsync(Device device)
     {
         await _context.DeviceDbSet.AddAsync(device);
@@ -35,9 +35,9 @@ public class DeviceRepository : IDeviceRepository
     public async Task<Device> UpdateAsync(Guid id, DevicePatch devicePatch)
     {
         var device = await _context.DeviceDbSet.FindAsync(id) ?? throw new DeviceNotFoundException(id);
-        device.Name = devicePatch.Name;
-        device.Brand = devicePatch.Brand;
-        device.State = devicePatch.State ?? device.State;
+        device.Name = devicePatch.Name ?? throw new ArgumentNullException(nameof(devicePatch.Name));
+        device.Brand = devicePatch.Brand ?? throw new ArgumentNullException(nameof(devicePatch.Brand));
+        device.State = devicePatch.State ?? throw new ArgumentNullException(nameof(devicePatch.State));
 
         _context.DeviceDbSet.Update(device);
         await _context.SaveChangesAsync();

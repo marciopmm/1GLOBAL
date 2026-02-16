@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Adapters\\Adapters.csproj",
+      "projectUniqueName": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\1GLOBAL\\Adapters\\Adapters.csproj",
       "projectName": "Adapters",
-      "projectPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Adapters\\Adapters.csproj",
+      "projectPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\1GLOBAL\\Adapters\\Adapters.csproj",
       "packagesPath": "C:\\Users\\Marcio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Adapters\\obj\\",
+      "outputPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\1GLOBAL\\Adapters\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

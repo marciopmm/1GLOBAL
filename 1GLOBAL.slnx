@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="Docs/11Global_Backend_CSharp_Challenge.pdf" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="Api/OneGlobal.Api.csproj" Id="698470cf-b33e-4719-9cdc-474624aad012" />
+  <Project Path="Application/OneGlobal.Application.csproj" Id="f04747c9-5e92-4092-a688-ec355e95f967" />
+  <Project Path="Domain/OneGlobal.Domain.csproj" Id="1c483e4f-21af-402c-8f6f-4d43857c3181" />
+  <Project Path="Infrastructure/OneGlobal.Infrastructure.csproj" Id="eb648720-1f91-4d5f-82b6-a4c0920942ea" />
+  <Project Path="Tests/OneGlobal.Tests.csproj" Id="391c0037-75c8-4164-9909-9dd5ba058e42" />
+</Solution>

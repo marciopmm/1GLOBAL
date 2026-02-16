@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Global.Tests")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("OneGlobal.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+286cd516bc9f93ddb4e98e775dbb65c80984b3b9")]
-[assembly: System.Reflection.AssemblyProductAttribute("Global.Tests")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Global.Tests")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d2d238f5837ccd9e1dbfc00d12c59939a04f424")]
+[assembly: System.Reflection.AssemblyProductAttribute("OneGlobal.Tests")]
+[assembly: System.Reflection.AssemblyTitleAttribute("OneGlobal.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Gerado pela classe WriteCodeFragment do MSBuild.

@@ -1,5 +1,5 @@
-using Global.Infrastructure.Persistence.DependencyInjection;
-using Global.Application.DependencyInjection;
+using OneGlobal.Infrastructure.Persistence.DependencyInjection;
+using OneGlobal.Application.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,7 +20,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/openapi/v1.json", "GLOBAL API V1");
+        c.SwaggerEndpoint("/openapi/v1.json", "1GLOBAL API V1");
     });
 }
 

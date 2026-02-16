@@ -1,18 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\",
+  "WorkspaceRootPath": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1C483E4F-21AF-402C-8F6F-4D43857C3181}|Domain\\Global.Domain.csproj|c:\\users\\marcio\\onedrive\\\u00E1rea de trabalho\\global\\domain\\ports\\idevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C483E4F-21AF-402C-8F6F-4D43857C3181}|Domain\\Global.Domain.csproj|solutionrelative:domain\\ports\\idevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C483E4F-21AF-402C-8F6F-4D43857C3181}|Domain\\OneGlobal.Domain.csproj|c:\\users\\marcio\\onedrive\\\u00E1rea de trabalho\\global\\domain\\ports\\idevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C483E4F-21AF-402C-8F6F-4D43857C3181}|Domain\\OneGlobal.Domain.csproj|solutionrelative:domain\\ports\\idevicerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F04747C9-5E92-4092-A688-EC355E95F967}|Application\\Global.Application.csproj|c:\\users\\marcio\\onedrive\\\u00E1rea de trabalho\\global\\application\\services\\devices\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F04747C9-5E92-4092-A688-EC355E95F967}|Application\\Global.Application.csproj|solutionrelative:application\\services\\devices\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F04747C9-5E92-4092-A688-EC355E95F967}|Application\\OneGlobal.Application.csproj|c:\\users\\marcio\\onedrive\\\u00E1rea de trabalho\\global\\application\\services\\devices\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F04747C9-5E92-4092-A688-EC355E95F967}|Application\\OneGlobal.Application.csproj|solutionrelative:application\\services\\devices\\deviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C483E4F-21AF-402C-8F6F-4D43857C3181}|Domain\\Global.Domain.csproj|c:\\users\\marcio\\onedrive\\\u00E1rea de trabalho\\global\\domain\\ports\\ideviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1C483E4F-21AF-402C-8F6F-4D43857C3181}|Domain\\Global.Domain.csproj|solutionrelative:domain\\ports\\ideviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1C483E4F-21AF-402C-8F6F-4D43857C3181}|Domain\\OneGlobal.Domain.csproj|c:\\users\\marcio\\onedrive\\\u00E1rea de trabalho\\global\\domain\\ports\\ideviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C483E4F-21AF-402C-8F6F-4D43857C3181}|Domain\\OneGlobal.Domain.csproj|solutionrelative:domain\\ports\\ideviceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1C483E4F-21AF-402C-8F6F-4D43857C3181}|Domain\\Domain.csproj|c:\\users\\marcio\\onedrive\\\u00E1rea de trabalho\\global\\domain\\enums\\state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,23 +23,23 @@
       "RelativeMoniker": "D:0:0:{1C483E4F-21AF-402C-8F6F-4D43857C3181}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\device.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1C483E4F-21AF-402C-8F6F-4D43857C3181}|Domain\\Global.Domain.csproj|c:\\users\\marcio\\onedrive\\\u00E1rea de trabalho\\global\\domain\\global.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{1C483E4F-21AF-402C-8F6F-4D43857C3181}|Domain\\Global.Domain.csproj|solutionrelative:domain\\global.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{1C483E4F-21AF-402C-8F6F-4D43857C3181}|Domain\\OneGlobal.Domain.csproj|c:\\users\\marcio\\onedrive\\\u00E1rea de trabalho\\global\\domain\\global.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1C483E4F-21AF-402C-8F6F-4D43857C3181}|Domain\\OneGlobal.Domain.csproj|solutionrelative:domain\\global.domain.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{698470CF-B33E-4719-9CDC-474624AAD012}|Api\\Api.csproj|c:\\users\\marcio\\onedrive\\\u00E1rea de trabalho\\global\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{698470CF-B33E-4719-9CDC-474624AAD012}|Api\\Api.csproj|solutionrelative:api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{698470CF-B33E-4719-9CDC-474624AAD012}|Api\\Global.Api.csproj|c:\\users\\marcio\\onedrive\\\u00E1rea de trabalho\\global\\api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{698470CF-B33E-4719-9CDC-474624AAD012}|Api\\Global.Api.csproj|solutionrelative:api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{698470CF-B33E-4719-9CDC-474624AAD012}|Api\\OneGlobal.Api.csproj|c:\\users\\marcio\\onedrive\\\u00E1rea de trabalho\\global\\api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{698470CF-B33E-4719-9CDC-474624AAD012}|Api\\OneGlobal.Api.csproj|solutionrelative:api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{698470CF-B33E-4719-9CDC-474624AAD012}|Api\\Api.csproj|c:\\users\\marcio\\onedrive\\\u00E1rea de trabalho\\global\\api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{698470CF-B33E-4719-9CDC-474624AAD012}|Api\\Api.csproj|solutionrelative:api\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{27B1ADFB-E825-4455-88C2-DD8BA5D088B3}|Solution Items{27B1ADFB-E825-4455-88C2-DD8BA5D088B3}|C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "AbsoluteMoniker": "D:0:0:{27B1ADFB-E825-4455-88C2-DD8BA5D088B3}|Solution Items{27B1ADFB-E825-4455-88C2-DD8BA5D088B3}|C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
       "RelativeMoniker": "D:0:0:{27B1ADFB-E825-4455-88C2-DD8BA5D088B3}|Solution Items{27B1ADFB-E825-4455-88C2-DD8BA5D088B3}|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     }
   ],
@@ -56,9 +56,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "IDeviceRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Domain\\Ports\\IDeviceRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Domain\\Ports\\IDeviceRepository.cs",
               "RelativeDocumentMoniker": "Domain\\Ports\\IDeviceRepository.cs",
-              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Domain\\Ports\\IDeviceRepository.cs",
+              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Domain\\Ports\\IDeviceRepository.cs",
               "RelativeToolTip": "Domain\\Ports\\IDeviceRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -69,9 +69,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "DeviceService.cs",
-              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Application\\Services\\Devices\\DeviceService.cs",
+              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Application\\Services\\Devices\\DeviceService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\Devices\\DeviceService.cs",
-              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Application\\Services\\Devices\\DeviceService.cs",
+              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Application\\Services\\Devices\\DeviceService.cs",
               "RelativeToolTip": "Application\\Services\\Devices\\DeviceService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -82,9 +82,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "IDeviceService.cs",
-              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Domain\\Ports\\IDeviceService.cs",
+              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Domain\\Ports\\IDeviceService.cs",
               "RelativeDocumentMoniker": "Domain\\Ports\\IDeviceService.cs",
-              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Domain\\Ports\\IDeviceService.cs",
+              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Domain\\Ports\\IDeviceService.cs",
               "RelativeToolTip": "Domain\\Ports\\IDeviceService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -94,11 +94,11 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Global.Domain",
-              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Domain\\Global.Domain.csproj",
-              "RelativeDocumentMoniker": "Domain\\Global.Domain.csproj",
-              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Domain\\Global.Domain.csproj",
-              "RelativeToolTip": "Domain\\Global.Domain.csproj",
+              "Title": "OneGlobal.Domain",
+              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Domain\\OneGlobal.Domain.csproj",
+              "RelativeDocumentMoniker": "Domain\\OneGlobal.Domain.csproj",
+              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Domain\\OneGlobal.Domain.csproj",
+              "RelativeToolTip": "Domain\\OneGlobal.Domain.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2026-02-15T01:36:18.412Z",
@@ -108,9 +108,9 @@
               "$type": "Document",
               "DocumentIndex": 7,
               "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Api\\WeatherForecast.cs",
+              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Api\\WeatherForecast.cs",
               "RelativeDocumentMoniker": "Api\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Api\\WeatherForecast.cs",
+              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Api\\WeatherForecast.cs",
               "RelativeToolTip": "Api\\WeatherForecast.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -121,9 +121,9 @@
               "$type": "Document",
               "DocumentIndex": 8,
               "Title": "WeatherForecastController.cs",
-              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Api\\Controllers\\WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Api\\Controllers\\WeatherForecastController.cs",
               "RelativeDocumentMoniker": "Api\\Controllers\\WeatherForecastController.cs",
-              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Api\\Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Api\\Controllers\\WeatherForecastController.cs",
               "RelativeToolTip": "Api\\Controllers\\WeatherForecastController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -134,9 +134,9 @@
               "$type": "Document",
               "DocumentIndex": 6,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Api\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Api\\Program.cs",
               "RelativeDocumentMoniker": "Api\\Program.cs",
-              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Api\\Program.cs",
+              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Api\\Program.cs",
               "RelativeToolTip": "Api\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -147,9 +147,9 @@
               "$type": "Document",
               "DocumentIndex": 9,
               "Title": "README.md",
-              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\README.md",
+              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\README.md",
               "RelativeDocumentMoniker": "README.md",
-              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\README.md",
+              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\README.md",
               "RelativeToolTip": "README.md",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
@@ -160,9 +160,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "State.cs",
-              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Domain\\Enums\\State.cs",
+              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Domain\\Enums\\State.cs",
               "RelativeDocumentMoniker": "Domain\\Enums\\State.cs",
-              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Domain\\Enums\\State.cs",
+              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Domain\\Enums\\State.cs",
               "RelativeToolTip": "Domain\\Enums\\State.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -173,9 +173,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Device.cs",
-              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Domain\\Entities\\Device.cs",
+              "DocumentMoniker": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Domain\\Entities\\Device.cs",
               "RelativeDocumentMoniker": "Domain\\Entities\\Device.cs",
-              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\GLOBAL\\Domain\\Entities\\Device.cs",
+              "ToolTip": "C:\\Users\\Marcio\\OneDrive\\\u00C1rea de Trabalho\\1GLOBAL\\Domain\\Entities\\Device.cs",
               "RelativeToolTip": "Domain\\Entities\\Device.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

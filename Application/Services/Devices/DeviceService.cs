@@ -1,10 +1,12 @@
 ﻿using AutoMapper;
-using Global.Application.DTOs;
-using Global.Domain.Entities;
-using Global.Domain.Enums;
-using Global.Domain.Ports;
+using OneGlobal.Application.DTOs;
+using OneGlobal.Application.Validations;
+using OneGlobal.Domain.Entities;
+using OneGlobal.Domain.Enums;
+using OneGlobal.Domain.Exceptions;
+using OneGlobal.Domain.Ports;
 
-namespace Global.Application.Services.Devices
+namespace OneGlobal.Application.Services.Devices
 {
     internal class DeviceService : IDeviceService
     {
@@ -19,7 +21,7 @@ namespace Global.Application.Services.Devices
         {
             return await _deviceRepository.GetAllAsync();
         }
-        
+
         public async Task<IEnumerable<Device>> GetDevicesByStateAsync(State state)
         {
             throw new NotImplementedException();
@@ -41,20 +43,39 @@ namespace Global.Application.Services.Devices
         }
 
         public async Task<Device> UpdateDeviceAsync(Guid id, DevicePatch devicePatch)
-        {   
-            //TODO: Implement update logic in the repository
+        {
+            await ValidateDeviceForUpdate(id, devicePatch);
             return await _deviceRepository.UpdateAsync(id, devicePatch);
         }
 
         public async Task<Device> UpdateDevicePartialAsync(Guid id, DevicePatch devicePatch)
         {
-            //TODO: Implement partial update logic in the repository
+            await ValidateDeviceForUpdate(id, devicePatch);
             return await _deviceRepository.UpdatePartialAsync(id, devicePatch);
         }
 
         public async Task DeleteDeviceAsync(Guid id)
         {
+            await ValidateDeviceForDelete(id);
             await _deviceRepository.DeleteAsync(id);
+        }
+
+        private async Task ValidateDeviceForUpdate(Guid id, DevicePatch patch)
+        {
+            var current = await _deviceRepository.GetByIdAsync(id);
+            if (!DeviceValidations.IsValidForUpdate(current, patch))
+            {
+                throw new InvalidStateForUpdateException(current.Id);
+            }
+        }
+
+        private async Task ValidateDeviceForDelete(Guid id)
+        {
+            var device = await _deviceRepository.GetByIdAsync(id);
+            if (!DeviceValidations.IsValidForDelete(device))
+            {
+                throw new InvalidStateForDeleteException(device.Id);
+            }
         }
     }
 }

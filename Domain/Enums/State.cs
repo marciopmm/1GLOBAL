@@ -1,4 +1,4 @@
-﻿namespace Global.Domain.Enums
+﻿namespace OneGlobal.Domain.Enums
 {
     public enum State
     {

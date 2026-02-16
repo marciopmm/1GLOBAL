@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Global.Domain.Entities;
+using OneGlobal.Domain.Entities;
 
-namespace Global.Domain.Ports
+namespace OneGlobal.Domain.Ports
 {
     public interface IDeviceRepository
     {

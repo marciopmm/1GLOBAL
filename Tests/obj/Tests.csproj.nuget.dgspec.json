@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Tests\\Tests.csproj": {}
+    "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\1GLOBAL\\Tests\\Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Tests\\Tests.csproj": {
+    "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\1GLOBAL\\Tests\\Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Tests\\Tests.csproj",
+        "projectUniqueName": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\1GLOBAL\\Tests\\Tests.csproj",
         "projectName": "Tests",
-        "projectPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Tests\\Tests.csproj",
+        "projectPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\1GLOBAL\\Tests\\Tests.csproj",
         "packagesPath": "C:\\Users\\Marcio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Tests\\obj\\",
+        "outputPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\1GLOBAL\\Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,11 +1,11 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Global.Infrastructure.Persistence.Db;
+using OneGlobal.Infrastructure.Persistence.Db;
 
-using Global.Domain.Ports;
-using Global.Infrastructure.Persistence.Repository;
+using OneGlobal.Domain.Ports;
+using OneGlobal.Infrastructure.Persistence.Repository;
 
-namespace Global.Infrastructure.Persistence.DependencyInjection;
+namespace OneGlobal.Infrastructure.Persistence.DependencyInjection;
 
 public static class PersistenceModule
 {

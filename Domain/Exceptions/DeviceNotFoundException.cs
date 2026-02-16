@@ -1,4 +1,4 @@
-namespace Global.Domain.Exceptions;
+namespace OneGlobal.Domain.Exceptions;
 
 public class DeviceNotFoundException : Exception
 {

@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
-using Global.Application.DTOs;
-using Global.Application.Abstractions.Services;
-using Global.Domain.Entities;
+using OneGlobal.Application.DTOs;
+using OneGlobal.Application.Abstractions.Services;
+using OneGlobal.Domain.Entities;
 
-namespace Global.Api.Controllers
+namespace OneGlobal.Api.Controllers
 {
     [ApiController]
     [Route("devices")]
