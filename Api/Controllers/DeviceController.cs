@@ -18,12 +18,17 @@ namespace MM.Api.Controllers
         }
 
         [HttpGet()]
+        [ProducesResponseType(typeof(IEnumerable<DeviceDTO>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IEnumerable<DeviceDTO>> Get()
         {
             return await _deviceDtoService.GetAllDevicesAsync();
         }
 
         [HttpGet("{id}")]
+        [ProducesResponseType(typeof(DeviceDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<DeviceDTO>> Get(Guid id)
         {
             try
@@ -45,18 +50,39 @@ namespace MM.Api.Controllers
             }
         }
 
+        [HttpGet("search")]
+        [ProducesResponseType(typeof(DeviceDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
+        public async Task<ActionResult<IEnumerable<DeviceDTO>>> GetByQuery(
+            [FromQuery] string? name,
+            [FromQuery] string? brand,
+            [FromQuery] string? state)
+        {
+            try
+            {
+                var device = await _deviceDtoService.GetDevicesByQueryAsync(name, brand, state);
+                return Ok(device);
+            }
+            catch (Exception)
+            {
+                return StatusCode(500, "An unexpected error occurred.");
+            }
+        }
+
         [HttpPost()]
+        [ProducesResponseType(typeof(DeviceDTO), StatusCodes.Status201Created)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<DeviceDTO>> Post([FromBody] AddDeviceDtoRequest addDeviceDto)
         {
             try
             {
-                return await _deviceDtoService.AddDeviceAsync(addDeviceDto);
+                return Created(string.Empty, await _deviceDtoService.AddDeviceAsync(addDeviceDto));
             }
-            catch (ArgumentNullException ex)
-            {
-                return BadRequest($"The field {ex.ParamName} is required.");
-            }
-            catch (InvalidStateException ex)
+            catch (Exception ex) when (ex is ArgumentOutOfRangeException ||
+                                       ex is ArgumentNullException ||
+                                       ex is ArgumentException ||
+                                       ex is InvalidStateException)
             {
                 return BadRequest(ex.Message);
             }
@@ -67,21 +93,20 @@ namespace MM.Api.Controllers
         }
 
         [HttpPut("{id}")]
+        [ProducesResponseType(typeof(DeviceDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<DeviceDTO>> Put(Guid id, [FromBody] UpdateDeviceDtoRequest updateDeviceDto)
         {
             try
             {
-                return await _deviceDtoService.UpdateDeviceAsync(id, updateDeviceDto);
+                return Ok(await _deviceDtoService.UpdateDeviceAsync(id, updateDeviceDto));
             }
-            catch (ArgumentNullException ex)
-            {
-                return BadRequest($"The field {ex.ParamName} is required.");
-            }
-            catch (InvalidStateForUpdateException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (InvalidStateException ex)
+            catch (Exception ex) when (ex is ArgumentNullException ||
+                                       ex is ArgumentException ||
+                                       ex is InvalidStateForUpdateException ||
+                                       ex is InvalidStateException)
             {
                 return BadRequest(ex.Message);
             }
@@ -96,21 +121,20 @@ namespace MM.Api.Controllers
         }
 
         [HttpPatch("{id}")]
+        [ProducesResponseType(typeof(DeviceDTO), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<ActionResult<DeviceDTO>> Patch(Guid id, [FromBody] UpdateDeviceDtoRequest updateDeviceDto)
         {
             try
             {
-                return await _deviceDtoService.UpdateDevicePartialAsync(id, updateDeviceDto);
+                return Ok(await _deviceDtoService.UpdateDevicePartialAsync(id, updateDeviceDto));
             }
-            catch (ArgumentNullException ex)
-            {
-                return BadRequest($"The field {ex.ParamName} is required.");
-            }
-            catch (InvalidStateForUpdateException ex)
-            {
-                return BadRequest(ex.Message);
-            }
-            catch (InvalidStateException ex)
+            catch (Exception ex) when (ex is ArgumentNullException ||
+                                       ex is ArgumentException ||
+                                       ex is InvalidStateForUpdateException ||
+                                       ex is InvalidStateException)
             {
                 return BadRequest(ex.Message);
             }
@@ -125,6 +149,10 @@ namespace MM.Api.Controllers
         }
 
         [HttpDelete("{id}")]
+        [ProducesResponseType(typeof(void), StatusCodes.Status204NoContent)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status400BadRequest)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status404NotFound)]
+        [ProducesResponseType(typeof(ProblemDetails), StatusCodes.Status500InternalServerError)]
         public async Task<IActionResult> Delete(Guid id)
         {
             try
@@ -132,9 +160,11 @@ namespace MM.Api.Controllers
                 await _deviceDtoService.DeleteDeviceAsync(id);
                 return NoContent();
             }
-            catch (ArgumentNullException ex)
+            catch (Exception ex) when (ex is ArgumentNullException ||
+                                       ex is ArgumentException ||
+                                       ex is InvalidStateForDeleteException)
             {
-                return BadRequest($"The field {ex.ParamName} is required.");
+                return BadRequest(ex.Message);
             }
             catch (DeviceNotFoundException ex)
             {

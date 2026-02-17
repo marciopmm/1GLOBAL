@@ -24,27 +24,35 @@ namespace MM.Application.Services.DeviceDTOs
             return _mapper.Map<IEnumerable<DeviceDTO>>(devices);
         }
 
-        public async Task<IEnumerable<DeviceDTO>> GetDevicesByStateAsync(string state)
-        {
-            if (!Enum.TryParse<State>(state, true, out var parsedState))
-            {
-                throw new ArgumentException("Invalid state value.");
-            }
-
-            var devices = await _deviceService.GetDevicesByStateAsync(parsedState);
-            return _mapper.Map<IEnumerable<DeviceDTO>>(devices);
-        }
-
-        public async Task<IEnumerable<DeviceDTO>> GetDevicesByBrandAsync(string brand)
-        {
-            var devices = await _deviceService.GetDevicesByBrandAsync(brand);
-            return _mapper.Map<IEnumerable<DeviceDTO>>(devices);
-        }
-
         public async Task<DeviceDTO> GetDeviceByIdAsync(Guid id)
         {
             var device = await _deviceService.GetDeviceByIdAsync(id);
             return _mapper.Map<DeviceDTO>(device);
+        }
+
+        public async Task<IEnumerable<DeviceDTO>> GetDevicesByQueryAsync(
+            string? name,
+            string? brand,
+            string? state)
+        {
+            var devices = await _deviceService.GetAllDevicesAsync();
+
+            if (!string.IsNullOrWhiteSpace(name))
+            {
+                devices = devices.Where(d => d.Name.ToLower().Contains(name.ToLower()));
+            }
+
+            if (!string.IsNullOrWhiteSpace(brand))
+            {
+                devices = devices.Where(d => d.Brand.ToLower().Contains(brand.ToLower()));
+            }
+
+            if (!string.IsNullOrWhiteSpace(state) && Enum.TryParse<State>(state, true, out var parsedState))
+            {
+                devices = devices.Where(d => d.State == parsedState);
+            }
+
+            return _mapper.Map<IEnumerable<DeviceDTO>>(devices);
         }
 
         public async Task<DeviceDTO> AddDeviceAsync(AddDeviceDtoRequest addDeviceDto)

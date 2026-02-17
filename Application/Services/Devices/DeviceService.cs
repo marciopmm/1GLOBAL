@@ -22,22 +22,6 @@ namespace MM.Application.Services.Devices
             return await _deviceRepository.GetAllAsync();
         }
 
-        public async Task<IEnumerable<Device>> GetDevicesByStateAsync(State state)
-        {
-            var devices = await _deviceRepository.GetAllAsync();
-            return devices.Where(d => d.State == state);
-        }
-
-        public async Task<IEnumerable<Device>> GetDevicesByBrandAsync(string brand)
-        {
-            if (string.IsNullOrWhiteSpace(brand))
-            {
-                throw new ArgumentNullException(nameof(brand));
-            }
-            var devices = await _deviceRepository.GetAllAsync();
-            return devices.Where(d => d.Brand.ToLower() == brand.ToLower());
-        }
-
         public async Task<Device> GetDeviceByIdAsync(Guid id)
         {
             if (id == Guid.Empty)

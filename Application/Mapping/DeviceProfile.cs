@@ -12,7 +12,7 @@ public class DeviceProfile : Profile
     {
         [State.Available] = "Available",
         [State.InUse] = "InUse",
-        [State.Inactive] = "Unavailable"
+        [State.Inactive] = "Inactive"
     };
 
     private static readonly IReadOnlyDictionary<string, State> TextToState =
@@ -20,7 +20,7 @@ public class DeviceProfile : Profile
         {
             ["Available"] = State.Available,
             ["InUse"] = State.InUse,
-            ["Unavailable"] = State.Inactive
+            ["Inactive"] = State.Inactive
         };
 
     public DeviceProfile()
@@ -70,7 +70,7 @@ public class DeviceProfile : Profile
             return (State)numeric;
         }
 
-        throw new ArgumentOutOfRangeException(nameof(value), value, "Unknown state value. Expected: Available, InUse, Unavailable, or corresponding numeric values.");
+        throw new ArgumentOutOfRangeException(nameof(value), value, "Unknown state value. Expected: Available, InUse, Inactive, or corresponding numeric values.");
     }
 
     private static State? MapNullableTextToState(string? value)

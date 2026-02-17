@@ -14,7 +14,7 @@ namespace MM.Infrastructure.Persistence.Db
 
         public MMDbContext(IConfiguration configuration)
         {
-            var rawConnection = configuration.GetConnectionString("Default") ?? "Data Source=../SQLite/MMDb.sqlite";
+            var rawConnection = configuration.GetConnectionString("Default") ?? "Data Source=/app/SQLite/MMDb.sqlite";
             var sqliteBuilder = new SqliteConnectionStringBuilder(rawConnection);
 
             var absolutePath = Path.GetFullPath(sqliteBuilder.DataSource);

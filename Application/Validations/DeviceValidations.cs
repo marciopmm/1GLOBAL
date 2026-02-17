@@ -8,9 +8,19 @@ public static class DeviceValidations
 {
     public static void IsValidForAdd(Device newDevice)
     {
-        if (!Enum.IsDefined(typeof(State), newDevice.State))
+        if (newDevice == null)
         {
-            throw new InvalidStateException();
+            throw new ArgumentNullException(nameof(newDevice));
+        }
+
+        if (string.IsNullOrWhiteSpace(newDevice.Name))
+        {
+            throw new ArgumentException("\"Name\" must be provided.", nameof(newDevice.Name));
+        }
+
+        if (string.IsNullOrWhiteSpace(newDevice.Brand))
+        {
+            throw new ArgumentException("\"Brand\" must be provided.", nameof(newDevice.Brand));
         }
     }
 
@@ -54,12 +64,12 @@ public static class DeviceValidations
             throw new InvalidStateException(current.Id);
         }
 
-        if (string.IsNullOrWhiteSpace(patch.Name))
+        if (patch.Name != null && string.IsNullOrWhiteSpace(patch.Name))
         {
             throw new ArgumentException("\"Name\" must be provided.", nameof(patch.Name));
         }
 
-        if (string.IsNullOrWhiteSpace(patch.Brand))
+        if (patch.Brand != null && string.IsNullOrWhiteSpace(patch.Brand))
         {
             throw new ArgumentException("\"Brand\" must be provided.", nameof(patch.Brand));
         }

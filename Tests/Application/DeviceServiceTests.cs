@@ -72,92 +72,6 @@ public class DeviceServiceTests
         Assert.AreEqual(devices, result);
         _repositoryMock.Verify(r => r.GetAllAsync(), Times.Once);
     }
-
-    [TestMethod]
-    public async Task GetDevicesByStateAsync_WhenStateIsAvailable_ReturnsDevicesList()
-    {
-        // Arrange
-        var devices = new List<Device>
-        {
-            new Device("Router", "Cisco", State.Available, DateTime.UtcNow),
-            new Device("Switch", "Juniper", State.InUse, DateTime.UtcNow)
-        };
-        _repositoryMock
-            .Setup(r => r.GetAllAsync())
-            .ReturnsAsync(devices);
-
-        // Act
-        var result = await _sut.GetDevicesByStateAsync(State.Available);
-
-        // Assert
-        Assert.AreEqual(1, result.Count());
-        Assert.AreEqual("Cisco", result.First().Brand);
-        _repositoryMock.Verify(r => r.GetAllAsync(), Times.Once);
-    }
-
-    [TestMethod]
-    public async Task GetDevicesByStateAsync_WhenStateIsInUse_ReturnsEmptyList()
-    {
-        // Arrange
-        var devices = new List<Device>
-        {
-            new Device("Router", "Cisco", State.Available, DateTime.UtcNow),
-            new Device("Switch", "Juniper", State.Available, DateTime.UtcNow)
-        };
-        _repositoryMock
-            .Setup(r => r.GetAllAsync())
-            .ReturnsAsync(devices);
-
-        // Act
-        var result = await _sut.GetDevicesByStateAsync(State.InUse);
-
-        // Assert
-        Assert.AreEqual(0, result.Count());
-        _repositoryMock.Verify(r => r.GetAllAsync(), Times.Once);
-    }
-
-    [TestMethod]
-    public async Task GetDevicesByBrandAsync_WhenBrandIsCisco_ReturnsDevicesList()
-    {
-        // Arrange
-        var devices = new List<Device>
-        {
-            new Device("Router", "Cisco", State.Available, DateTime.UtcNow),
-            new Device("Switch", "Juniper", State.Available, DateTime.UtcNow)
-        };
-        _repositoryMock
-            .Setup(r => r.GetAllAsync())
-            .ReturnsAsync(devices);
-
-        // Act
-        var result = await _sut.GetDevicesByBrandAsync("Cisco");
-
-        // Assert
-        Assert.AreEqual(1, result.Count());
-        Assert.AreEqual("Cisco", result.First().Brand);
-        _repositoryMock.Verify(r => r.GetAllAsync(), Times.Once);
-    }
-
-    [TestMethod]
-    public async Task GetDevicesByBrandAsync_WhenBrandIsUnknown_ReturnsEmptyList()
-    {
-        // Arrange
-        var devices = new List<Device>
-        {
-            new Device("Router", "Cisco", State.Available, DateTime.UtcNow),
-            new Device("Switch", "Juniper", State.Available, DateTime.UtcNow)
-        };
-        _repositoryMock
-            .Setup(r => r.GetAllAsync())
-            .ReturnsAsync(devices);
-
-        // Act
-        var result = await _sut.GetDevicesByBrandAsync("Unknown");
-
-        // Assert
-        Assert.AreEqual(0, result.Count());
-        _repositoryMock.Verify(r => r.GetAllAsync(), Times.Once);
-    }
     #endregion GetDevice tests
 
     #region AddDeviceAsync tests
@@ -186,6 +100,17 @@ public class DeviceServiceTests
 
         // Act & Assert
         await Assert.ThrowsExceptionAsync<ArgumentNullException>(() => _sut.AddDeviceAsync(device!));
+        _repositoryMock.Verify(r => r.AddAsync(It.IsAny<Device>()), Times.Never);
+    }
+
+    [TestMethod]
+    public async Task AddDeviceAsync_WhenStateIsInvalid_ThrowsInvalidStateException()
+    {
+        // Arrange
+        var device = new Device("Router", "Cisco", (State)999, DateTime.UtcNow);
+
+        // Act & Assert
+        await Assert.ThrowsExceptionAsync<InvalidStateException>(() => _sut.AddDeviceAsync(device!));
         _repositoryMock.Verify(r => r.AddAsync(It.IsAny<Device>()), Times.Never);
     }
     #endregion AddDeviceAsync tests
