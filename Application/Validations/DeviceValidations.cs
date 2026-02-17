@@ -1,8 +1,8 @@
-using OneGlobal.Domain.Entities;
-using OneGlobal.Domain.Enums;
-using OneGlobal.Domain.Exceptions;
+using MM.Domain.Entities;
+using MM.Domain.Enums;
+using MM.Domain.Exceptions;
 
-namespace OneGlobal.Application.Validations;
+namespace MM.Application.Validations;
 
 public static class DeviceValidations
 {

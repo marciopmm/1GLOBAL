@@ -1,4 +1,4 @@
-namespace OneGlobal.Domain.Exceptions;
+namespace MM.Domain.Exceptions;
 
 public class InvalidStateException : Exception
 {

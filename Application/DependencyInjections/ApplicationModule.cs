@@ -1,11 +1,11 @@
 using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
-using OneGlobal.Application.Abstractions.Services;
-using OneGlobal.Application.Services.DeviceDTOs;
-using OneGlobal.Application.Services.Devices;
-using OneGlobal.Domain.Ports;
+using MM.Application.Abstractions.Services;
+using MM.Application.Services.DeviceDTOs;
+using MM.Application.Services.Devices;
+using MM.Domain.Ports;
 
-namespace OneGlobal.Application.DependencyInjection;
+namespace MM.Application.DependencyInjection;
 
 public static class ApplicationModule
 {

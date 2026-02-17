@@ -1,12 +1,12 @@
 ﻿using AutoMapper;
-using OneGlobal.Application.DTOs;
-using OneGlobal.Application.Validations;
-using OneGlobal.Domain.Entities;
-using OneGlobal.Domain.Enums;
-using OneGlobal.Domain.Exceptions;
-using OneGlobal.Domain.Ports;
+using MM.Application.DTOs;
+using MM.Application.Validations;
+using MM.Domain.Entities;
+using MM.Domain.Enums;
+using MM.Domain.Exceptions;
+using MM.Domain.Ports;
 
-namespace OneGlobal.Application.Services.Devices
+namespace MM.Application.Services.Devices
 {
     public class DeviceService : IDeviceService
     {

@@ -1,10 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
-using OneGlobal.Application.DTOs;
-using OneGlobal.Application.Abstractions.Services;
-using OneGlobal.Domain.Entities;
-using OneGlobal.Domain.Exceptions;
+using MM.Application.DTOs;
+using MM.Application.Abstractions.Services;
+using MM.Domain.Entities;
+using MM.Domain.Exceptions;
 
-namespace OneGlobal.Api.Controllers
+namespace MM.Api.Controllers
 {
     [ApiController]
     [Route("devices")]
@@ -56,7 +56,7 @@ namespace OneGlobal.Api.Controllers
             {
                 return BadRequest(ex.Message);
             }
-            catch (Exception) 
+            catch (Exception)
             {
                 return StatusCode(500, "An unexpected error occurred.");
             }

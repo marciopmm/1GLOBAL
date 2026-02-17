@@ -1,9 +1,9 @@
 using AutoMapper;
-using OneGlobal.Application.DTOs;
-using OneGlobal.Domain.Entities;
-using OneGlobal.Domain.Enums;
+using MM.Application.DTOs;
+using MM.Domain.Entities;
+using MM.Domain.Enums;
 
-namespace OneGlobal.Application.Mapping;
+namespace MM.Application.Mapping;
 
 public class DeviceProfile : Profile
 {

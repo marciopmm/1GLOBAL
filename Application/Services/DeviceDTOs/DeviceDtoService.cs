@@ -1,11 +1,11 @@
 using AutoMapper;
-using OneGlobal.Application.Abstractions.Services;
-using OneGlobal.Application.DTOs;
-using OneGlobal.Domain.Entities;
-using OneGlobal.Domain.Enums;
-using OneGlobal.Domain.Ports;
+using MM.Application.Abstractions.Services;
+using MM.Application.DTOs;
+using MM.Domain.Entities;
+using MM.Domain.Enums;
+using MM.Domain.Ports;
 
-namespace OneGlobal.Application.Services.DeviceDTOs
+namespace MM.Application.Services.DeviceDTOs
 {
     public class DeviceDtoService : IDeviceDtoService
     {

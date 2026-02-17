@@ -1,6 +1,6 @@
-using OneGlobal.Domain.Enums;
+using MM.Domain.Enums;
 
-namespace OneGlobal.Application.DTOs
+namespace MM.Application.DTOs
 {
     public class DeviceDTO
     {

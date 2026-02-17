@@ -1,24 +1,24 @@
 using Moq;
-using OneGlobal.Domain.Entities;
-using OneGlobal.Domain.Enums;
-using OneGlobal.Domain.Exceptions;
-using OneGlobal.Infrastructure.Persistence.Abstractions;
-using OneGlobal.Infrastructure.Persistence.Repository;
+using MM.Domain.Entities;
+using MM.Domain.Enums;
+using MM.Domain.Exceptions;
+using MM.Infrastructure.Persistence.Abstractions;
+using MM.Infrastructure.Persistence.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 
-namespace OneGlobal.Tests.Infrastructure;
+namespace MM.Tests.Infrastructure;
 
 [TestClass]
 public class DeviceRepositoryTests
 {
-    private Mock<IOneGlobalDbContext> _dbContextMock = null!;
+    private Mock<IMMDbContext> _dbContextMock = null!;
     private DeviceRepository _sut = null!;
 
     [TestInitialize]
     public void Setup()
     {
-        _dbContextMock = new Mock<IOneGlobalDbContext>();
+        _dbContextMock = new Mock<IMMDbContext>();
         _sut = new DeviceRepository(_dbContextMock.Object);
     }
 
@@ -58,9 +58,9 @@ public class DeviceRepositoryTests
     {
         // Arrange
         var device = new Device("Router", "Cisco", State.Available, DateTime.UtcNow);
-        _dbContextMock            
+        _dbContextMock
             .Setup(r => r.DeviceDbSet.AddAsync(device, It.IsAny<CancellationToken>()))
-            .ReturnsAsync(new EntityEntry<Device>(null!)); 
+            .ReturnsAsync(new EntityEntry<Device>(null!));
 
         // Act
         var result = await _sut.AddAsync(device);
@@ -96,7 +96,7 @@ public class DeviceRepositoryTests
     public async Task UpdateAsync_WhenDeviceIsValid_ReturnsUpdatedDevice()
     {
         // Arrange
-        var devicePatch = new DevicePatch {Name = "Router", Brand = "Cisco", State = State.InUse };
+        var devicePatch = new DevicePatch { Name = "Router", Brand = "Cisco", State = State.InUse };
         var updatedDevice = new Device("Router", "Cisco", State.InUse, DateTime.UtcNow);
         _dbContextMock
             .Setup(r => r.DeviceDbSet.FindAsync(updatedDevice.Id))

@@ -1,6 +1,6 @@
-using OneGlobal.Application.DTOs;
+using MM.Application.DTOs;
 
-namespace OneGlobal.Application.Abstractions.Services;
+namespace MM.Application.Abstractions.Services;
 
 public interface IDeviceDtoService
 {

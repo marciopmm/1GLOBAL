@@ -16,9 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Infrastructure\OneGlobal.Infrastructure.csproj" />
-    <ProjectReference Include="..\Domain\OneGlobal.Domain.csproj" />
-    <ProjectReference Include="..\Application\OneGlobal.Application.csproj" />
+    <ProjectReference Include="..\Infrastructure\MM.Infrastructure.csproj" />
+    <ProjectReference Include="..\Domain\MM.Domain.csproj" />
+    <ProjectReference Include="..\Application\MM.Application.csproj" />
   </ItemGroup>
 
 </Project>

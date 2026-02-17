@@ -1,11 +1,11 @@
 ﻿using Moq;
-using OneGlobal.Application.Services.Devices;
-using OneGlobal.Domain.Entities;
-using OneGlobal.Domain.Enums;
-using OneGlobal.Domain.Exceptions;
-using OneGlobal.Domain.Ports;
+using MM.Application.Services.Devices;
+using MM.Domain.Entities;
+using MM.Domain.Enums;
+using MM.Domain.Exceptions;
+using MM.Domain.Ports;
 
-namespace OneGlobal.Tests.Application;
+namespace MM.Tests.Application;
 
 [TestClass]
 public class DeviceServiceTests

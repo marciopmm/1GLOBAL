@@ -1,8 +1,8 @@
-using OneGlobal.Domain.Entities;
+using MM.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-namespace OneGlobal.Infrastructure.Persistence.Abstractions
+namespace MM.Infrastructure.Persistence.Abstractions
 {
-    public interface IOneGlobalDbContext
+    public interface IMMDbContext
     {
         DbSet<Device> DeviceDbSet { get; set; }
 

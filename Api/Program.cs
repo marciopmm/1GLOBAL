@@ -1,5 +1,5 @@
-using OneGlobal.Infrastructure.Persistence.DependencyInjection;
-using OneGlobal.Application.DependencyInjection;
+using MM.Infrastructure.Persistence.DependencyInjection;
+using MM.Application.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 

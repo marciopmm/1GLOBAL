@@ -1,20 +1,20 @@
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using OneGlobal.Domain.Entities;
-using OneGlobal.Infrastructure.Persistence.Abstractions;
+using MM.Domain.Entities;
+using MM.Infrastructure.Persistence.Abstractions;
 
-namespace OneGlobal.Infrastructure.Persistence.Db
+namespace MM.Infrastructure.Persistence.Db
 {
-    public class OneGlobalDbContext : DbContext, IOneGlobalDbContext
+    public class MMDbContext : DbContext, IMMDbContext
     {
         private readonly string _connectionString;
 
         public virtual DbSet<Device> DeviceDbSet { get; set; } = null!;
 
-        public OneGlobalDbContext(IConfiguration configuration)
+        public MMDbContext(IConfiguration configuration)
         {
-            var rawConnection = configuration.GetConnectionString("Default") ?? "Data Source=../SQLite/OneGlobalDb.sqlite";
+            var rawConnection = configuration.GetConnectionString("Default") ?? "Data Source=../SQLite/MMDb.sqlite";
             var sqliteBuilder = new SqliteConnectionStringBuilder(rawConnection);
 
             var absolutePath = Path.GetFullPath(sqliteBuilder.DataSource);

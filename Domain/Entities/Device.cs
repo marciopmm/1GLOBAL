@@ -1,6 +1,6 @@
-﻿using OneGlobal.Domain.Enums;
+﻿using MM.Domain.Enums;
 
-namespace OneGlobal.Domain.Entities
+namespace MM.Domain.Entities
 {
     public record Device
     {

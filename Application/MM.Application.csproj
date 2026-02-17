@@ -16,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Domain\OneGlobal.Domain.csproj" />
+    <ProjectReference Include="..\Domain\MM.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

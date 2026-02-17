@@ -1167,44 +1167,44 @@
           }
         }
       },
-      "OneGlobal.Application/1.0.0": {
+      "MM.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
           "AutoMapper": "12.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
-          "OneGlobal.Domain": "1.0.0"
+          "MM.Domain": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/OneGlobal.Application.dll": {}
+          "bin/placeholder/MM.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/OneGlobal.Application.dll": {}
+          "bin/placeholder/MM.Application.dll": {}
         }
       },
-      "OneGlobal.Domain/1.0.0": {
+      "MM.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "compile": {
-          "bin/placeholder/OneGlobal.Domain.dll": {}
+          "bin/placeholder/MM.Domain.dll": {}
         },
         "runtime": {
-          "bin/placeholder/OneGlobal.Domain.dll": {}
+          "bin/placeholder/MM.Domain.dll": {}
         }
       },
-      "OneGlobal.Infrastructure/1.0.0": {
+      "MM.Infrastructure/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
         "dependencies": {
+          "MM.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "10.0.3",
-          "Microsoft.EntityFrameworkCore.Sqlite": "10.0.3",
-          "OneGlobal.Domain": "1.0.0"
+          "Microsoft.EntityFrameworkCore.Sqlite": "10.0.3"
         },
         "compile": {
-          "bin/placeholder/OneGlobal.Infrastructure.dll": {}
+          "bin/placeholder/MM.Infrastructure.dll": {}
         },
         "runtime": {
-          "bin/placeholder/OneGlobal.Infrastructure.dll": {}
+          "bin/placeholder/MM.Infrastructure.dll": {}
         }
       }
     }
@@ -2870,31 +2870,31 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "OneGlobal.Application/1.0.0": {
+    "MM.Application/1.0.0": {
       "type": "project",
-      "path": "../Application/OneGlobal.Application.csproj",
-      "msbuildProject": "../Application/OneGlobal.Application.csproj"
+      "path": "../Application/MM.Application.csproj",
+      "msbuildProject": "../Application/MM.Application.csproj"
     },
-    "OneGlobal.Domain/1.0.0": {
+    "MM.Domain/1.0.0": {
       "type": "project",
-      "path": "../Domain/OneGlobal.Domain.csproj",
-      "msbuildProject": "../Domain/OneGlobal.Domain.csproj"
+      "path": "../Domain/MM.Domain.csproj",
+      "msbuildProject": "../Domain/MM.Domain.csproj"
     },
-    "OneGlobal.Infrastructure/1.0.0": {
+    "MM.Infrastructure/1.0.0": {
       "type": "project",
-      "path": "../Infrastructure/OneGlobal.Infrastructure.csproj",
-      "msbuildProject": "../Infrastructure/OneGlobal.Infrastructure.csproj"
+      "path": "../Infrastructure/MM.Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/MM.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "MM.Application >= 1.0.0",
+      "MM.Domain >= 1.0.0",
+      "MM.Infrastructure >= 1.0.0",
       "MSTest.TestAdapter >= 3.2.2",
       "MSTest.TestFramework >= 3.2.2",
       "Microsoft.NET.Test.Sdk >= 17.10.0",
       "Moq >= 4.20.72",
-      "OneGlobal.Application >= 1.0.0",
-      "OneGlobal.Domain >= 1.0.0",
-      "OneGlobal.Infrastructure >= 1.0.0",
       "coverlet.collector >= 6.0.0"
     ]
   },
@@ -2905,9 +2905,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Tests\\OneGlobal.Tests.csproj",
-      "projectName": "OneGlobal.Tests",
-      "projectPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Tests\\OneGlobal.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Tests\\MM.Tests.csproj",
+      "projectName": "MM.Tests",
+      "projectPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Tests\\MM.Tests.csproj",
       "packagesPath": "C:\\Users\\Marcio\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Tests\\obj\\",
       "projectStyle": "PackageReference",
@@ -2930,14 +2930,14 @@
         "net10.0": {
           "targetAlias": "net10.0",
           "projectReferences": {
-            "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Application\\OneGlobal.Application.csproj": {
-              "projectPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Application\\OneGlobal.Application.csproj"
+            "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Application\\MM.Application.csproj": {
+              "projectPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Application\\MM.Application.csproj"
             },
-            "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Domain\\OneGlobal.Domain.csproj": {
-              "projectPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Domain\\OneGlobal.Domain.csproj"
+            "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Domain\\MM.Domain.csproj": {
+              "projectPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Domain\\MM.Domain.csproj"
             },
-            "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Infrastructure\\OneGlobal.Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Infrastructure\\OneGlobal.Infrastructure.csproj"
+            "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Infrastructure\\MM.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Infrastructure\\MM.Infrastructure.csproj"
             }
           }
         }

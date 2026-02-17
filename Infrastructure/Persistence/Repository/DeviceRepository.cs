@@ -1,17 +1,17 @@
-using OneGlobal.Domain.Entities;
-using OneGlobal.Domain.Exceptions;
-using OneGlobal.Domain.Ports;
-using OneGlobal.Infrastructure.Persistence.Db;
+using MM.Domain.Entities;
+using MM.Domain.Exceptions;
+using MM.Domain.Ports;
+using MM.Infrastructure.Persistence.Db;
 using Microsoft.EntityFrameworkCore;
-using OneGlobal.Infrastructure.Persistence.Abstractions;
+using MM.Infrastructure.Persistence.Abstractions;
 
-namespace OneGlobal.Infrastructure.Persistence.Repository;
+namespace MM.Infrastructure.Persistence.Repository;
 
 public class DeviceRepository : IDeviceRepository
 {
-    private readonly IOneGlobalDbContext _context;
+    private readonly IMMDbContext _context;
 
-    public DeviceRepository(IOneGlobalDbContext context)
+    public DeviceRepository(IMMDbContext context)
     {
         _context = context;
     }
@@ -30,7 +30,7 @@ public class DeviceRepository : IDeviceRepository
     {
         if (string.IsNullOrWhiteSpace(device.Name)) throw new ArgumentNullException("Name");
         if (string.IsNullOrWhiteSpace(device.Brand)) throw new ArgumentNullException("Brand");
-        
+
         await _context.DeviceDbSet.AddAsync(device);
         await _context.SaveChangesAsync();
         return device;

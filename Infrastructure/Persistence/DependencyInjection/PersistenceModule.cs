@@ -1,13 +1,13 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using OneGlobal.Infrastructure.Persistence.Db;
+using MM.Infrastructure.Persistence.Db;
 
-using OneGlobal.Domain.Ports;
-using OneGlobal.Infrastructure.Persistence.Db;
-using OneGlobal.Infrastructure.Persistence.Repository;
-using OneGlobal.Infrastructure.Persistence.Abstractions;
+using MM.Domain.Ports;
+using MM.Infrastructure.Persistence.Db;
+using MM.Infrastructure.Persistence.Repository;
+using MM.Infrastructure.Persistence.Abstractions;
 
-namespace OneGlobal.Infrastructure.Persistence.DependencyInjection;
+namespace MM.Infrastructure.Persistence.DependencyInjection;
 
 public static class PersistenceModule
 {
@@ -16,10 +16,10 @@ public static class PersistenceModule
         IConfiguration configuration)
     {
         // DbContext
-        services.AddDbContext<OneGlobalDbContext>();
+        services.AddDbContext<MMDbContext>();
 
         // Repositories (Ports and Adapters Implementations)
-        services.AddScoped<IOneGlobalDbContext>(sp => sp.GetRequiredService<OneGlobalDbContext>());
+        services.AddScoped<IMMDbContext>(sp => sp.GetRequiredService<MMDbContext>());
         services.AddScoped<IDeviceRepository, DeviceRepository>();
 
         return services;

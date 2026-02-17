@@ -1,7 +1,7 @@
-﻿using OneGlobal.Domain.Entities;
-using OneGlobal.Domain.Enums;
+﻿using MM.Domain.Entities;
+using MM.Domain.Enums;
 
-namespace OneGlobal.Domain.Ports
+namespace MM.Domain.Ports
 {
     public interface IDeviceService
     {
