@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "rUXXaJ/MQh8=",
+  "dgSpecHash": "wfFkdr89N9o=",
   "success": true,
   "projectFilePath": "C:\\Users\\Marcio\\OneDrive\\Área de Trabalho\\GLOBAL\\Tests\\MM.Tests.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\Marcio\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\10.0.3\\microsoft.entityframeworkcore.sqlite.core.10.0.3.nupkg.sha512",
     "C:\\Users\\Marcio\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\10.0.3\\microsoft.extensions.caching.abstractions.10.0.3.nupkg.sha512",
     "C:\\Users\\Marcio\\.nuget\\packages\\microsoft.extensions.caching.memory\\10.0.3\\microsoft.extensions.caching.memory.10.0.3.nupkg.sha512",
+    "C:\\Users\\Marcio\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\Marcio\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.3\\microsoft.extensions.configuration.abstractions.10.0.3.nupkg.sha512",
     "C:\\Users\\Marcio\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\10.0.3\\microsoft.extensions.dependencyinjection.10.0.3.nupkg.sha512",
     "C:\\Users\\Marcio\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\10.0.3\\microsoft.extensions.dependencyinjection.abstractions.10.0.3.nupkg.sha512",

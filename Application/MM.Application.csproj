@@ -7,12 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Abstractions\Time\" />
-    <Folder Include="Abstractions\Persistence\" />
+    <Compile Remove="Abstractions\Persistence\**" />
+    <Compile Remove="Abstractions\Time\**" />
+    <Compile Remove="Errors\**" />
+    <Compile Remove="Validation\**" />
+    <EmbeddedResource Remove="Abstractions\Persistence\**" />
+    <EmbeddedResource Remove="Abstractions\Time\**" />
+    <EmbeddedResource Remove="Errors\**" />
+    <EmbeddedResource Remove="Validation\**" />
+    <None Remove="Abstractions\Persistence\**" />
+    <None Remove="Abstractions\Time\**" />
+    <None Remove="Errors\**" />
+    <None Remove="Validation\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="DTOs\" />
     <Folder Include="Mapping\" />
-    <Folder Include="Errors\" />
-    <Folder Include="Validation\" />
   </ItemGroup>
 
   <ItemGroup>

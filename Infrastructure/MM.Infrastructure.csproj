@@ -7,9 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DB\" />
-    <Folder Include="DependencyInjection\" />
-    <Folder Include="Repositories\" />
+    <Compile Remove="DB\**" />
+    <Compile Remove="DependencyInjection\**" />
+    <Compile Remove="Repositories\**" />
+    <EmbeddedResource Remove="DB\**" />
+    <EmbeddedResource Remove="DependencyInjection\**" />
+    <EmbeddedResource Remove="Repositories\**" />
+    <None Remove="DB\**" />
+    <None Remove="DependencyInjection\**" />
+    <None Remove="Repositories\**" />
   </ItemGroup>
 
   <ItemGroup>

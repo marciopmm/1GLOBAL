@@ -81,7 +81,7 @@ namespace MM.Application.Services.Devices
             {
                 throw new ArgumentNullException(nameof(devicePatch));
             }
-            await ValidateDeviceForUpdate(id, devicePatch);
+            await ValidateDeviceForUpdatePartial(id, devicePatch);
             return await _deviceRepository.UpdatePartialAsync(id, devicePatch);
         }
 
@@ -104,6 +104,12 @@ namespace MM.Application.Services.Devices
         {
             var current = await _deviceRepository.GetByIdAsync(id);
             DeviceValidations.IsValidForUpdate(current, patch);
+        }
+
+        private async Task ValidateDeviceForUpdatePartial(Guid id, DevicePatch patch)
+        {
+            var current = await _deviceRepository.GetByIdAsync(id);
+            DeviceValidations.IsValidForUpdatePartial(current, patch);
         }
 
         private async Task ValidateDeviceForDelete(Guid id)

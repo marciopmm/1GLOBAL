@@ -6,6 +6,6 @@ namespace MM.Application.DTOs
     {
         public string Name { get; set; } = null!;
         public string Brand { get; set; } = null!;
-        public State State { get; set; } = State.Inactive;
+        public string State { get; set; } = null!;
     }
 }

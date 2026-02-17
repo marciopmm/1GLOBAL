@@ -16,10 +16,35 @@ public static class DeviceValidations
 
     public static void IsValidForUpdate(Device current, DevicePatch patch)
     {
-        if (patch.State.HasValue &&
-            patch.State == State.InUse &&
-            current.Name == (patch.Name ?? current.Name) &&
-            current.Brand == (patch.Brand ?? current.Brand))
+        if (current.State == State.InUse &&
+           ((patch.Name != null && patch.Name != current.Name) ||
+            (patch.Brand != null && patch.Brand != current.Brand)))
+        {
+            throw new InvalidStateForUpdateException(current.Id);
+        }
+
+        if (!patch.State.HasValue ||
+            (patch.State.HasValue && !Enum.IsDefined(typeof(State), patch.State)))
+        {
+            throw new InvalidStateException(current.Id);
+        }
+
+        if (string.IsNullOrWhiteSpace(patch.Name))
+        {
+            throw new ArgumentException("\"Name\" must be provided.", nameof(patch.Name));
+        }
+
+        if (string.IsNullOrWhiteSpace(patch.Brand))
+        {
+            throw new ArgumentException("\"Brand\" must be provided.", nameof(patch.Brand));
+        }
+    }
+
+    public static void IsValidForUpdatePartial(Device current, DevicePatch patch)
+    {
+        if (current.State == State.InUse &&
+           ((patch.Name != null && patch.Name != current.Name) ||
+            (patch.Brand != null && patch.Brand != current.Brand)))
         {
             throw new InvalidStateForUpdateException(current.Id);
         }
@@ -27,6 +52,16 @@ public static class DeviceValidations
         if (patch.State.HasValue && !Enum.IsDefined(typeof(State), patch.State))
         {
             throw new InvalidStateException(current.Id);
+        }
+
+        if (string.IsNullOrWhiteSpace(patch.Name))
+        {
+            throw new ArgumentException("\"Name\" must be provided.", nameof(patch.Name));
+        }
+
+        if (string.IsNullOrWhiteSpace(patch.Brand))
+        {
+            throw new ArgumentException("\"Brand\" must be provided.", nameof(patch.Brand));
         }
     }
 

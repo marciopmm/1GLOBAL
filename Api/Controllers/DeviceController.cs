@@ -35,6 +35,10 @@ namespace MM.Api.Controllers
                 }
                 return Ok(device);
             }
+            catch (DeviceNotFoundException ex)
+            {
+                return NotFound(ex.Message);
+            }
             catch (Exception)
             {
                 return StatusCode(500, "An unexpected error occurred.");
